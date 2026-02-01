@@ -1,5 +1,6 @@
 const express = require("express");
 const noteModel = require("./models/notes.model");
+const { default: mongoose } = require("mongoose");
 
 const app = express();
 
@@ -16,6 +17,15 @@ app.post("/notes", async (req, res) => {
         message: "note created successfully",
         note
     });
+});
+
+app.get("/notes", async (req, res) => {
+     const notes = await noteModel.find();
+
+     res.status(200).json({
+        message: "notes fetched successfully",
+        notes
+     })
 });
 
 module.exports = app;
