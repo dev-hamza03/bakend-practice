@@ -9,7 +9,7 @@ const App = () => {
   const [description, setDescription] = useState("");
 
   const fetchNotes = () => {
-    axios.get("http://localhost:3000/api/notes")
+    axios.get("https://bakend-practice.onrender.com/api/notes")
       .then((res) => {
         setNotes(res.data.notes);
       });
@@ -23,7 +23,7 @@ const App = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:3000/api/notes", {
+    axios.post("https://bakend-practice.onrender.com/api/notes", {
       title, description
     }).then((res) => {
       console.log(res.data);
@@ -34,7 +34,7 @@ const App = () => {
   }
 
   const deletHandler = (noteId) => {
-    axios.delete("http://localhost:3000/api/notes/" + noteId)
+    axios.delete("https://bakend-practice.onrender.com//api/notes/" + noteId)
       .then((res) => {
         console.log(res.data);
         fetchNotes();
@@ -47,7 +47,7 @@ const App = () => {
 
     if (!description) return;
 
-    axios.patch("http://localhost:3000/api/notes/" + Noteid, {
+    axios.patch("https://bakend-practice.onrender.com/api/notes/" + Noteid, {
       description: description
     }).then((res) => {
       console.log(res.data);
