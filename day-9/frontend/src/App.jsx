@@ -34,7 +34,7 @@ const App = () => {
   }
 
   const deletHandler = (noteId) => {
-    axios.delete("https://bakend-practice.onrender.com//api/notes/" + noteId)
+    axios.delete("https://bakend-practice.onrender.com/api/notes/" + noteId)
       .then((res) => {
         console.log(res.data);
         fetchNotes();
