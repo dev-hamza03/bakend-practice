@@ -13,6 +13,40 @@ html,
   background-color: rgb(26, 25, 25);
 }
 
+form {
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+}
+
+form input {
+  padding: .8rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+}
+
+form button {
+  padding: .7rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  border: none;
+  transition: all ease .3s;
+}
+
+form button:hover {
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+form button:active {
+  scale: .86;
+}
+
 
 .notes {
   display: flex;
@@ -22,6 +56,7 @@ html,
   text-align: center;
   width: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 .note {
@@ -30,4 +65,36 @@ html,
   width: 13rem;
   padding: 1rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.note button {
+  padding: .5rem;
+  font-size: 1rem;
+  border-radius: .5rem;
+  border: none;
+  width: fit-content;
+  background-color: rgb(240, 73, 73);
+  color: white;
+  margin-top: .8rem;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+.note button:nth-of-type(2) {
+  background-color: rgb(63, 63, 233);
+}
+
+.note button:nth-of-type(2):hover {
+  background-color: blue;
+}
+
+.note button:hover {
+  background-color: rgb(232, 39, 39);
+}
+
+.note button:active {
+  scale: 1.1;
 }
